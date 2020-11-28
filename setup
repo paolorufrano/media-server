@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "Running first setup... \n"
+
+mkdir -p transmission/{config,downloads,watch} sonarr/config plex/{config,transcode,data}
+
+docker-compose pull
+
+echo "\n"
+
+read -p "Would you like to start the server now? <Y/n> " prompt
+if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
+then
+  echo "\n"
+  docker-compose up -d
+else
+  echo "\nDone! 🥄"
+  exit 0
+fi
+
+echo "\nDone! 🥄"
