@@ -1,7 +1,7 @@
 # Home media server setup
 
 ## 🥄 
-To setup everything up, run:
+To set everything up, run:
 
 ```
 sh setup
